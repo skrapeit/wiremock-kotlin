@@ -3,6 +3,7 @@ package it.skrape
 import com.github.tomakehurst.wiremock.client.WireMock
 import com.github.tomakehurst.wiremock.matching.UrlPattern
 
+@WireMockDsl
 class UrlPatternScope {
 
     lateinit var pattern: UrlPattern

@@ -3,6 +3,7 @@ package it.skrape
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder
 import com.github.tomakehurst.wiremock.http.Fault
 
+@WireMockDsl
 class ResponseScope {
 
     val builder =

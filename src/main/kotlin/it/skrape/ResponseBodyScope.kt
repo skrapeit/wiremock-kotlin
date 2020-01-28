@@ -3,6 +3,7 @@ package it.skrape
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder
 import com.github.tomakehurst.wiremock.common.Json
 
+@WireMockDsl
 class ResponseBodyScope(
         val stringHandler: (bodyString: String) -> ResponseDefinitionBuilder,
         val fileHandler: (contents: String) -> ResponseDefinitionBuilder) {

@@ -3,6 +3,7 @@ package it.skrape
 import com.github.tomakehurst.wiremock.client.MappingBuilder
 import com.github.tomakehurst.wiremock.client.WireMock
 
+@WireMockDsl
 class StubScope {
 
     val builders = mutableListOf<MappingBuilder>()

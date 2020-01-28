@@ -1,5 +1,6 @@
 package it.skrape
 
+@WireMockDsl
 class MappingScope {
 
     val url = UrlPatternScope()
