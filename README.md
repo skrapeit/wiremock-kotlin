@@ -18,5 +18,17 @@ stubFor {
             body jsonFromObject Song("The revenge of Vera Gemini")
         }
     }
+
+    post {
+        url matching "/your/([a-z]*)\\?and=query"
+        
+        willReturn { 
+            status = 201
+            body.file("my/path/example.json")
+            fixedDelay { 
+                milliseconds = 3000
+            }
+        }
+    }
 }
 ```
