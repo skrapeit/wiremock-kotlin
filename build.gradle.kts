@@ -1,9 +1,11 @@
 plugins {
-    kotlin("jvm") version "1.3.60"
+    kotlin("jvm") version "1.4.20"
 }
 
 group = "it.skrape"
 version = "0.1.0"
+
+val junitVersion: String by project
 
 repositories {
     mavenCentral()
@@ -12,6 +14,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation("com.github.tomakehurst:wiremock:+")
+    testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
 }
 
 tasks {
@@ -21,4 +24,9 @@ tasks {
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+    test {
+        useJUnitPlatform()
+    }
 }
+
+
